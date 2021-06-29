@@ -1,0 +1,104 @@
+@import 'styles/config';
+@import 'styles/st';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: 'Proxima Nova', Georgia, sans-serif;
+}
+
+.header {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+  @include between;
+}
+
+header {
+  display: flex;
+  height: 80px;
+  box-shadow: 0px 2px 4px #E9E9E9;
+
+  .header-logo {
+    text-transform: uppercase;
+  }
+
+  .header-list ul {
+    @include between;
+    list-style: none;
+    width: 499px;
+    height: 24px;
+
+    & li {
+      display: flex;
+      @include s-w-h(16px, 400, 17.6px);
+    }
+
+    & li:last-child {
+
+    }
+  }
+
+  .header-ball {
+    @include between;
+    width: 55px;
+    height: 24px;
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+.header-icon {
+  display: flex;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  & i {
+    @include s-w-h(16px, 700, 20px);
+    color: $ff;
+  }
+}
+
+.header-photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px #5a60e7 solid;
+  
+  @include center;
+
+
+  img {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+.header-notifications {
+  position: relative;
+  display: flex;
+  span {
+    @include center;
+    position: absolute;
+    background: $cyan;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+
+    left: 12px;
+    top: 14px;
+
+    @include s-w-h(12px, 400, 13.2px);
+    color: $white;
+  }
+}
+
+@import 'styles/media';

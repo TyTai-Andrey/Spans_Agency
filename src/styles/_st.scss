@@ -1,0 +1,19 @@
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+@mixin s-w-h($size, $weight, $height) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+}
+
