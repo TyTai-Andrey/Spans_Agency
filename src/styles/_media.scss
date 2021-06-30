@@ -1,0 +1,267 @@
+@media screen and (max-width: 320px) {
+
+	body {
+		// height: 100vh;
+		// overflow: hidden;
+	}
+
+	main {
+		flex-direction: column;
+		width: 320px;
+		padding: 0;
+		position: relative;
+		z-index: 2;
+		overflow: hidden;
+	}
+
+	.wrapper {
+		margin: 0;
+	}
+
+	footer .wrapper {
+		// display: flex;
+		// flex-direction: column-reverse;
+	}
+
+	footer {
+		text-align: center;
+		margin-top: 100px;
+	}
+
+	footer .footer-contacts .contacts-tel,footer .footer-contacts .contacts-mail {
+		justify-content: center;
+	}
+
+	footer .footer-contacts .contacts-tel span,footer .footer-contacts .contacts-mail span {
+		display: none;
+	}
+
+	.stat {
+		flex-direction: column-reverse;
+		width: 320px;
+		border-radius: 0;
+		height: 280px;
+		// padding: 10px 10px 20px 10px;
+	}
+
+	footer .footer-icons {
+		margin-top: 93px;
+		width: 220px;
+		order: 2;
+	}
+
+	.footer-icon img {
+		width: 105px;
+		height: 30px;
+	}
+
+	.player {
+		width: 100%;
+		border-radius: 0;
+	}
+
+	.social {
+		display: none;
+	}
+
+	footer .footer-bottom {
+
+		position: relative;
+
+		.footer-social-icons {
+			position: absolute;
+			bottom: 200px;
+		}
+	}
+
+
+
+	footer .footer-bottom .footer-info a {
+		text-decoration: underline;
+	}
+
+	.season-info {
+		overflow: scroll;
+	}
+
+	.season-list {
+		width: 320px;
+	}
+
+	.group {
+		width: 100px;
+	}
+
+	.season-list .title-numberTotal,.season-list .title-rating, .season-elem .season-rating, .season-elem .season-numberTotal {
+		display: none;
+	}
+
+	.season-elem .season-numberGame, .season-elem .season-numberGol,.season-elem .season-numberPas, .season-list .title-numberPas,.season-list .title-numberGol,.season-list .title-numberGame {
+		width: 21px;
+	}
+
+	.season-elem .season-date,.season-elem .season-numberGame, .season-elem .season-numberGol,.season-elem .season-numberPas {
+      @include s-w-h(14px, 400, 15.4px);
+
+	}
+
+	footer {
+		padding: 20px 47px;
+	}
+
+	footer .footer-bottom {
+		flex-direction: column;
+	}
+
+	footer .footer-top .footer-right {
+		display: none;
+	}
+
+	header .header-ball, .header-photo {
+		display: none;
+	}
+
+	.header-list {
+		display: none;
+	}
+
+	.statistics {
+		width: 320px;
+		// height: 280px;
+		padding: 10px 10px 0 10px;
+		.statistics-buttons {
+
+		}
+		.statistics-icons {
+			width: 285px;
+			margin-bottom: 10px;
+			.icon {
+				width: 67.5px;
+				height: 60px;
+				.icon-name {
+			      @include s-w-h(12px, 400, 13.2px);
+			    }
+
+			    .icon-number {
+
+			      @include s-w-h(20px, 400, 22px);
+			      bottom: 7px;
+			      right: 9.5px;
+			    }
+
+			}
+		}
+	}
+
+	.statistics .statistics-buttons {
+		margin: 10px 0 0 0 ;
+	}
+
+	.stat .achievements {
+		margin: 0;
+		padding: 10px;
+	}
+
+	.achievements-letters {
+		padding: 0 10px 10px 10px ;
+		color: $grey;
+        @include s-w-h(14px, 400, 15.4px);
+	}
+
+	.stat .achievements .achievements-top {
+		width: 300px;
+	
+		.achievements-top_left {
+			width: 130px;
+		}
+		.achievements-top_right {
+			width: 80px;
+		}
+	}
+
+	.side_menu-list {
+		height: 80px;
+		margin: 0;
+		display: flex;
+		align-items: center;
+		position: relative;
+
+		li {
+			flex-shrink: 0;
+			margin-left: 10px;
+			position: relative;
+		}
+
+		li.active {
+			position: relative;
+		}
+
+		li.active ol {
+			position: a;
+			margin-top: 100px;
+			border-radius: 5px;
+
+			li:first-child {
+				background: $bb;
+				border-radius: 5px;
+				color: $white;
+				// align-items: center;
+			}
+		}
+
+		// li:not(li.active ol li):
+
+		ol {
+			// position: absolute;
+			background: #fff;
+			z-index: 4;
+		}
+	}
+
+	footer .footer-contacts .contacts-title {
+		display: none;
+	}
+
+
+	.season-elem .season-date,.season-list .title-date {
+		width: 137px;
+	}
+
+	.side_menu-list li:last-child:not(.side_menu-list li ol li) {
+		margin: 0;
+	}
+
+	.player .player-bottom {
+		position: relative;
+	}
+
+	.player .player-bottom .social-icons {
+		display: block;
+
+		position: absolute;
+		right: -15px;
+		bottom: -15px;
+
+		.social-icons__block {
+			display: flex;
+		}
+	}
+
+	.mobil {
+	  display: block;
+	}
+
+	.desctop {
+		display: none;
+	}
+
+	.footer-left {
+	    display: flex;
+	    flex-direction: column;
+	}
+
+	.footer-logo {
+		order: 3;
+	}
+}
+

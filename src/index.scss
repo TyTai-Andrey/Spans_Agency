@@ -1,6 +1,8 @@
 @import 'styles/config';
 @import 'styles/st';
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +11,13 @@
 
 body {
     font-family: 'Proxima Nova', Georgia, sans-serif;
+  min-height: 100vh;
+
+}
+.wrapper {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .header {
@@ -100,5 +109,565 @@ header {
     color: $white;
   }
 }
+
+main {
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.bg-grad {
+  background: linear-gradient(238.37deg, rgba(90, 96, 231, 0.35) 6.34%, rgba(30, 30, 40, 0) 103.77%), #2C2C2C;
+}
+
+.player {
+  border-radius: 10px;
+  width: 295px;
+  height: 184px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'Roboto', sans-serif;
+
+  .player-top {
+    @include between;
+    position: relative;
+
+    .circle {
+      position: absolute;
+      top: -43px;
+      left: -45px;
+
+      circle {
+        background: #fff;
+      }
+    }
+
+    .player-text {
+      color: $white;
+    }
+    .player-account {
+      @include s-w-h(30px, 400, 33px);
+      width: 77px;
+      position: relative;
+      display: flex;
+
+      .player-numbers {
+        position: absolute;
+        background: $bb;
+        border-radius: 10px;
+        padding: 1px 6.5px;
+        left: 80px;
+        @include center;
+        @include s-w-h(12px, 400, 10.2px);
+
+        svg {
+          width: 15px;
+          height: 15px;
+        }
+      }
+    }
+    .player-name {
+      @include s-w-h(20px, 400, 22px);
+      width: 165px;
+
+    }
+  }
+
+  .player-bottom {
+    color: $ff;
+    display: flex;
+    align-items: flex-end;
+    
+
+    .player-edit {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      width: 100%;
+    }
+
+    span {
+      @include s-w-h(12px, 400, 13.2px);
+      margin-left: 5px;
+    }
+
+    .social-icons {
+      display: none;
+    }
+  }
+}
+
+.side_menu-list {
+  margin: 50px 0 0 20px;
+  list-style: none;
+
+  @include s-w-h(16px, 400, 22.4px);
+
+
+  li {
+    overflow-y: hidden;
+    height: 32px;
+    display: flex;
+    align-items: center;
+  }
+
+  li.active {
+    height: auto;
+
+    ol li:first-child {
+      background: #efeffd;
+    }
+
+    i {
+      transform: rotate(180deg);
+    }
+  }
+
+
+
+  li:first-child {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  li:last-child {
+    margin-top: 55px;
+  }
+
+  ol {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    li {
+      margin-left: 30px;
+    }
+
+    li:first-child {
+    margin-left: 0px;
+    }
+    li:last-child {
+      margin-top: 0px;
+    }
+  }
+}
+
+.stat {
+  max-width: 1015px;
+  // width: 100%;
+
+  min-height: 184px;
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: space-between;
+
+  .achievements {
+    width: 275px;
+    height: 108px;
+    margin: 25px 0 0 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .achievements-top {
+      width: 275px;
+      height: 43px;
+      border-bottom: 1px solid #D6D7F9;
+      padding-bottom: 3px;
+    }
+
+    .achievements-top_left {
+      width: 140px;
+    }
+
+    .achievements-top_right {
+      width: 80px;
+    }
+
+    .achievements-bottom {
+      width: 195px;
+      height: 40px;
+    }
+  }
+
+  .inline {
+    @include between;
+
+  }
+
+  .achievement {
+
+    position: relative;
+
+    .achievement-number {
+      position: absolute;
+      background: $white;
+      padding: 1.5px 5px;
+      border-radius: 10px;
+
+      top: -10px;
+      left: 23px;
+
+      @include s-w-h(12px, 400, 13.2px);
+      @include center;
+    }
+  }
+}
+
+.inactive img {
+  filter: grayscale(100%);
+}
+
+.statistics {
+
+  width: 440px;
+  height: 155px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .statistics-buttons {
+
+    
+    height: 40px;
+
+    margin-top: 20px;
+    padding: 5px;
+
+    border: 0.5px solid #5A60E7;
+    border-radius: 5px;
+
+
+    .active {
+      background: #5A60E7;
+      border-radius: 3px;
+
+      color: $white!important;
+    }
+
+    .button-season {
+
+      @include center;
+
+      width: 50%;
+      height: 100%;
+
+      color: $ff;
+      font-family: roboto;
+      @include s-w-h(16px, 400, 17.6px);
+
+    }
+  }
+
+
+  .statistics-icons {
+      @include between;
+  }
+
+  .icon {
+    width: 95px;
+    height: 75px;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: roboto;
+
+
+
+    position: relative;
+
+
+    .icon-name {
+      @include s-w-h(16px, 400, 17.6px);
+      color: $white;
+
+    }
+
+    .icon-number {
+
+      @include s-w-h(30px, 400, 42px);
+
+      color: $red;
+
+      position: absolute;
+      bottom: 0;
+      right: 10px;
+    }
+  }
+}
+
+.social {
+  width: 166px;
+  height: 150px;
+  margin-top: 10px;
+
+  position: relative;
+
+  .social-export {
+    color: $ff;
+    padding-left: 7.5px;
+    @include s-w-h(12px, 400, 13.2px);
+
+  }
+
+  .social-icons__block {
+    width: 120px;
+    height: 40px;
+    @include between;
+  }
+
+  .social-bg {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    width: 150px;
+    height: 150px;
+
+    position: absolute;
+    bottom: -14px;
+    right: 20px;
+  }
+
+  .cross {
+    margin-top: 30px;
+    width: 30px;
+    height: 30px;
+    position: relative;
+
+
+    span {
+      width: 40px;
+      background: #5A60E7;
+      display: block;
+      position: absolute;
+    }
+
+    span:first-child {
+      transform: rotate(45deg);
+      top: 13px;
+      right: -6px;
+    }
+
+    span:last-child {
+      transform: rotate(-45deg);
+      top: 13px;
+      right: -6px;
+
+    }
+
+  }
+
+  .cross.x1 span {
+    height: 1px;
+  }
+  .cross.x2 span {
+    height: 2px;
+  }
+  .cross.x3 span {
+    height: 3px;
+  }
+
+}
+
+.season-info {
+
+    margin-top: 20px;
+    max-width: 1015px;
+    width: 100%;
+
+    text-align: left;
+
+    .season-menu {
+
+      display: flex;
+      padding: 9px 10px;  
+
+      .season-select {
+
+      }
+    }
+  }
+
+  .group {
+    @include between;
+    width: 540px;
+  }
+
+  .season-list {
+
+
+    .list-title {
+
+      @include between;
+      @include s-w-h(12px, 400, 13.2px);
+      color: $grey;
+      padding: 22px 39px 5px 20px;
+
+
+    }
+    .title-date {
+      width: 430px;
+    }
+    .title-numberGame {
+      width: 71px;
+    }
+    .title-numberGol {
+      width: 30px;
+    }
+    .title-numberPas {
+      width: 33px;
+    }
+    .title-numberTotal {
+      width: 61px;
+    }
+    .title-rating {
+      width: 56px;
+    }
+  }
+
+  .season-elem {
+
+      @include between;
+      @include s-w-h(16px, 400, 17.6px);  
+      font-family: roboto;
+      padding: 21px 39px 21px 20px;
+
+
+    .season-date {
+      width: 430px;
+    }
+    .season-numberGame {
+      width: 71px;
+    }
+    .season-numberGol {
+      width: 30px;
+    }
+    .season-numberPas {
+      width: 33px;
+    }
+    .season-numberTotal {
+      width: 61px;
+    }
+    .season-rating {
+      @include s-w-h(16px, 600, 17.6px);  
+      width: 56px;
+      color: $bb;
+    }
+  }
+
+footer {
+  margin-top: 443px;
+  height: 400px;
+  background: $gg;
+  padding: 50px 40px 0 40px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .footer-icons {
+    @include between;
+    width: 284px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+
+    .footer-right {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin-left: 170px;
+
+      .col {
+        list-style: none;
+        color: $white;
+        @include s-w-h(16px, 400, 17.6px);  
+        font-family: roboto;
+        
+        li {
+          margin-bottom: 10px;
+        } 
+        li:first-child {
+          margin-bottom: 20px;
+          color: $ff;
+        } 
+        li:last-child {
+          margin-bottom: 0px;
+        } 
+
+      }
+    }
+  }
+
+  .footer-contacts {
+
+    @include s-w-h(16px, 400, 17.6px);  
+
+    .contacts-title {
+      color: $ff;
+    }
+
+    .contacts-tel {
+      color: $white;
+      margin-top: 20px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+    }
+
+    .contacts-mail {
+      color: $white;
+      margin-top: 20px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+    }
+
+  }
+
+
+  .footer-bottom {
+    @include between;
+    @include s-w-h(16px, 400, 17.6px); 
+    color: $white;
+    margin-bottom: 16px;
+    margin-top: 20px;
+
+    .footer-warning{
+
+    }
+
+    .footer-social-icons {
+      @include center;
+      align-items: flex-end;      
+    }
+
+    .footer-info{
+        a {
+          color: $white;
+          text-decoration: none;
+        }
+    }
+
+  }
+}
+
+.mobil {
+  display: none;
+}
+
+
 
 @import 'styles/media';
